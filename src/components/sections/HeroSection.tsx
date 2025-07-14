@@ -22,12 +22,11 @@ const HeroSection = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 py-40 sm:py-12 md:py-24 pb-16 sm:pb-24 lg:pb-32">
         <div className="max-w-4xl mx-auto text-center">
-          
           {/* Logo */}
-          <div className={`mb-8 transform transition-all duration-1500 ${isVisible ? 'scale-100 opacity-100' : 'scale-75 opacity-0'}`}>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider mb-4 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+          <div className={`mb-6 transform transition-all duration-1500 ${isVisible ? 'scale-100 opacity-100' : 'scale-75 opacity-0'}`}> 
+            <h1 className="text-6xl md:text-8xl lg:text-7xl font-bold tracking-wider mb-2 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
               WHOOPFLOW
             </h1>
             <p className="text-lg md:text-xl text-gray-300 tracking-wide">
@@ -36,17 +35,16 @@ const HeroSection = () => {
           </div>
 
           {/* Main Value Proposition */}
-          <div className={`mb-12 transform transition-all duration-1500 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight">
+          <div className={`mb-6 transform transition-all duration-1500 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}> 
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-light mb-4 leading-tight">
               <span className="text-white">We don't chase </span>
               <span className="bg-gradient-to-r from-red-400 to-pink-500 bg-clip-text text-transparent font-bold">likes.</span>
             </h2>
-            <h3 className="text-3xl md:text-5xl lg:text-6xl font-light mb-8 leading-tight">
+            <h3 className="text-3xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight">
               <span className="text-white">We deliver </span>
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent font-bold">ROI.</span>
             </h3>
-            
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-4">
               Forget vanity metrics. We're not your typical agency making empty promises. 
               We focus on what matters: <span className="text-blue-400 font-semibold">real results</span>, 
               <span className="text-purple-400 font-semibold"> measurable growth</span>, and 
@@ -54,27 +52,8 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Key Stats */}
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 transform transition-all duration-1500 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-              <TrendingUp className="w-8 h-8 text-blue-400 mb-4 mx-auto group-hover:text-white transition-colors duration-300" />
-              <h4 className="text-2xl font-bold text-white mb-2">3.2x</h4>
-              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Average ROI Increase</p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-              <Users className="w-8 h-8 text-purple-400 mb-4 mx-auto group-hover:text-white transition-colors duration-300" />
-              <h4 className="text-2xl font-bold text-white mb-2">250%</h4>
-              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Lead Generation Boost</p>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
-              <Target className="w-8 h-8 text-indigo-400 mb-4 mx-auto group-hover:text-white transition-colors duration-300" />
-              <h4 className="text-2xl font-bold text-white mb-2">90%</h4>
-              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Client Retention Rate</p>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transform transition-all duration-1500 delay-900 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          {/* CTA Buttons - SIEMPRE VISIBLES EN MOVIL */}
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 sm:mb-10 transform transition-all duration-1500 delay-900 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}> 
             <button 
               onClick={scrollToCalendly}
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-3 text-lg"
@@ -91,6 +70,24 @@ const HeroSection = () => {
             </button>
           </div>
 
+          {/* Key Stats - SIEMPRE VISIBLES */}
+          <div className={` py-20 md:py-0 grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-8 sm:mt-12 sm:mb-12 transform transition-all duration-1500 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}> 
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
+              <TrendingUp className="w-8 h-8 text-blue-400 mb-4 mx-auto group-hover:text-white transition-colors duration-300" />
+              <h4 className="text-2xl font-bold text-white mb-2">3.2x</h4>
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Average ROI Increase</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
+              <Users className="w-8 h-8 text-purple-400 mb-4 mx-auto group-hover:text-white transition-colors duration-300" />
+              <h4 className="text-2xl font-bold text-white mb-2">250%</h4>
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Lead Generation Boost</p>
+            </div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
+              <Target className="w-8 h-8 text-indigo-400 mb-4 mx-auto group-hover:text-white transition-colors duration-300" />
+              <h4 className="text-2xl font-bold text-white mb-2">90%</h4>
+              <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Client Retention Rate</p>
+            </div>
+          </div>
         </div>
       </div>
 

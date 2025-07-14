@@ -161,13 +161,7 @@ const CalendlySection = () => {
         </div>
 </div>
       </div>
-        {/* Bottom Message */}
-        <div className={`text-center mt-12 transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <p className="text-gray-400 text-sm max-w-2xl mx-auto">
-            During our call, we'll analyze your current marketing efforts, identify growth opportunities, 
-            and create a customized strategy to maximize your ROI.
-          </p>
-        </div>
+    
       </div>
     </section>
   );

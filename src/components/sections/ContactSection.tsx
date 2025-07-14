@@ -296,25 +296,36 @@ ${formData.message}
 
               <div className="mt-12 mb-8 p-8 bg-gradient-to-br from-blue-900/60 via-blue-800/70 to-purple-900/60 rounded-2xl border-2 border-blue-400/40 shadow-xl">
                 <div className="flex items-center gap-3 mb-3">
-                  <Check className="w-7 h-7 text-green-400" />
                   <h4 className="text-2xl md:text-3xl font-extrabold text-white tracking-wide">Why Choose WHOOPFLOW?</h4>
                 </div>
-                <ul className="space-y-3 text-gray-100 text-lg pl-10">
-                  <li className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-green-400" />
-                    <span>Proven ROI optimization strategies</span>
+                <ul className="space-y-6 text-gray-100 text-lg pl-2">
+                  <li className="flex items-start gap-3">
+                    <Check className="w-7 h-7 text-green-400 mt-1" />
+                    <div>
+                      <span className="font-bold text-white">ROI-First Mentality</span>
+                      <p className="text-gray-300 text-base mt-1">We don’t chase likes—we engineer results. Every campaign is built to generate measurable ROI from day one.</p>
+                    </div>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-green-400" />
-                    <span>Data-driven decision making</span>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-7 h-7 text-green-400 mt-1" />
+                    <div>
+                      <span className="font-bold text-white">Data Over Guesswork</span>
+                      <p className="text-gray-300 text-base mt-1">We let data guide every decision. Real-time analytics fuel strategies that evolve and perform.</p>
+                    </div>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-green-400" />
-                    <span>Transparent reporting & analytics</span>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-7 h-7 text-green-400 mt-1" />
+                    <div>
+                      <span className="font-bold text-white">Radical Transparency</span>
+                      <p className="text-gray-300 text-base mt-1">You’ll always know what’s working. No smoke. No mirrors. Just honest reporting and clear insights.</p>
+                    </div>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <Check className="w-5 h-5 text-green-400" />
-                    <span>Dedicated account management</span>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-7 h-7 text-green-400 mt-1" />
+                    <div>
+                      <span className="font-bold text-white">Personalized Growth Partners</span>
+                      <p className="text-gray-300 text-base mt-1">You’re never just a client. Your dedicated account strategist becomes part of your team.</p>
+                    </div>
                   </li>
                 </ul>
               </div>

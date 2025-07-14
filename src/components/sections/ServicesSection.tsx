@@ -117,7 +117,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services-section" className="py-32 px-32  bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden relative">
+    <section id="services-section" className="py-10 px-4 sm:py-16 md:py-24 md:px-16 lg:py-32 lg:px-32 bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden relative">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
