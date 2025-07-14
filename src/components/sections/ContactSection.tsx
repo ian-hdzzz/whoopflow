@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Send, Mail, Phone, MapPin, Check, AlertCircle } from 'lucide-react';
+import { Send, Mail, Phone, MapPin, Check, AlertCircle, X } from 'lucide-react';
 
 const ContactSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -125,110 +125,61 @@ ${formData.message}
             <h3 className="text-2xl font-semibold mb-6 text-white">Get in Touch</h3>
             
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="companyName" className="block text-sm font-medium text-gray-300 mb-2">
-                    Company Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="companyName"
-                    name="companyName"
-                    value={formData.companyName}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
-                    placeholder="Your Company"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="contactName" className="block text-sm font-medium text-gray-300 mb-2">
-                    Contact Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="contactName"
-                    name="contactName"
-                    value={formData.contactName}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
-                    placeholder="Your Name"
-                  />
-                </div>
+              <div className="mb-4">
+                <label htmlFor="companyName" className="block text-sm font-medium text-gray-300 mb-2">
+                  Company Name *
+                </label>
+                <input
+                  type="text"
+                  id="companyName"
+                  name="companyName"
+                  value={formData.companyName}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
+                  placeholder="Your Company"
+                />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
+                  placeholder="your@email.com"
+                />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="website" className="block text-sm font-medium text-gray-300 mb-2">
-                    Website
-                  </label>
-                  <input
-                    type="url"
-                    id="website"
-                    name="website"
-                    value={formData.website}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
-                    placeholder="https://yourwebsite.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="industry" className="block text-sm font-medium text-gray-300 mb-2">
-                    Industry
-                  </label>
-                  <select
-                    id="industry"
-                    name="industry"
-                    value={formData.industry}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
-                  >
-                    <option value="">Select Industry</option>
-                    <option value="ecommerce">E-commerce</option>
-                    <option value="saas">SaaS</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="finance">Finance</option>
-                    <option value="education">Education</option>
-                    <option value="realestate">Real Estate</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
+              <div className="mb-4">
+                <label htmlFor="industry" className="block text-sm font-medium text-gray-300 mb-2">
+                  Industry
+                </label>
+                <select
+                  id="industry"
+                  name="industry"
+                  value={formData.industry}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-300"
+                >
+                  <option value="">Select Industry</option>
+                  <option value="ecommerce">E-commerce</option>
+                  <option value="saas">SaaS</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="finance">Finance</option>
+                  <option value="education">Education</option>
+                  <option value="realestate">Real Estate</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
 
-              <div>
+              {/* <div>
                 <label htmlFor="monthlyRevenue" className="block text-sm font-medium text-gray-300 mb-2">
                   Monthly Revenue Range
                 </label>
@@ -246,7 +197,7 @@ ${formData.message}
                   <option value="100k-500k">$100,000 - $500,000</option>
                   <option value="500k+">$500,000+</option>
                 </select>
-              </div>
+              </div> */}
 
               <div>
                 <label htmlFor="currentChallenges" className="block text-sm font-medium text-gray-300 mb-2">
@@ -314,8 +265,8 @@ ${formData.message}
 
           {/* Contact Info */}
           <div className={`transform transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 h-full">
-              <h3 className="text-2xl font-semibold mb-6 text-white">Contact Information</h3>
+            {/* <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 h-full"> */}
+              {/* <h3 className="text-2xl font-semibold mb-6 text-white">Contact Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
@@ -341,33 +292,62 @@ ${formData.message}
                     <p className="text-white">Remote • Worldwide</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="mt-12 p-6 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-lg border border-blue-400/20">
-                <h4 className="text-xl font-semibold mb-4 text-white">Why Choose WHOOPFLOW?</h4>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-green-400" />
+              <div className="mt-12 mb-8 p-8 bg-gradient-to-br from-blue-900/60 via-blue-800/70 to-purple-900/60 rounded-2xl border-2 border-blue-400/40 shadow-xl">
+                <div className="flex items-center gap-3 mb-3">
+                  <Check className="w-7 h-7 text-green-400" />
+                  <h4 className="text-2xl md:text-3xl font-extrabold text-white tracking-wide">Why Choose WHOOPFLOW?</h4>
+                </div>
+                <ul className="space-y-3 text-gray-100 text-lg pl-10">
+                  <li className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-green-400" />
                     <span>Proven ROI optimization strategies</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-green-400" />
+                  <li className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-green-400" />
                     <span>Data-driven decision making</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-green-400" />
+                  <li className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-green-400" />
                     <span>Transparent reporting & analytics</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-green-400" />
+                  <li className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-green-400" />
                     <span>Dedicated account management</span>
                   </li>
                 </ul>
               </div>
+              {/* What We Don't Do - Improved Section */}
+              <div className="mt-8 relative z-20 p-8 bg-gradient-to-r from-black/80 via-gray-900/80 to-black/80 border-t-2 border-red-500/30 rounded-xl shadow-lg text-left">
+                <div className="flex items-center gap-3 mb-2">
+                  <X className="w-7 h-7 text-red-400" />
+                  <h3 className="text-2xl font-bold text-white">What We Don't Do</h3>
+                </div>
+                <p className="text-base text-gray-400 mb-4 pl-10">
+                  We focus on what truly drives ROI. These are areas that <span className="text-red-400 font-semibold">we do not offer</span> as core services:
+                </p>
+                <ul className="space-y-3 pl-10">
+                  {[
+                    "Content Creation (as a standalone service)",
+                    "Social Media Management (posting, community management)"
+                  ].map((service, index) => (
+                    <li key={index} className="flex items-center gap-3 text-gray-200">
+                      <X className="w-5 h-5 text-red-400 shrink-0" />
+                      <span>{service}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-4 pl-10">
+                  <p className="text-sm text-gray-400">
+                    <span className="font-semibold text-white">Note:</span> We do create photos and videos for campaigns and web development as part of our projects.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 };
